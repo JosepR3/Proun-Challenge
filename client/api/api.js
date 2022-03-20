@@ -17,7 +17,6 @@ export async function normalizeResponse(promise = Promise.resolve) {
   } catch (error) {
     defaultResponse.errorMessage = error.message;
   }
-
   return defaultResponse;
 }
 
@@ -42,11 +41,7 @@ export function makeRequest(
         headers: {
           ...baseHeaders,
           ...headers,
-        },
-        validateStatus: function validateStatus(status) {
-          // Resolve only if the status code is in the 200 range
-          return status >= 200 && status < 400;
-        },
+        }
       })
     );
   };
