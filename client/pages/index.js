@@ -1,13 +1,29 @@
 import Head from 'next/head';
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 
+// State
+import { fetchAllReviews } from '../redux/reviews/reviews-actions';
+
+
+// Components
 import Header from '../components/Header/header';
 import SearchSection from '../components/SearchSection/searchSection';
 import AdvantagesSection from '../components/AdvantagesSection/advantagesSection';
 import ToSellSection from '../components/toSellSection/toSellSection';
 import ToPricesSection from '../components/toPricesSection/toPricesSection';
 import ClientImgSection from '../components/ClientImgSection/clientImgSection';
+import ClientReviewSection from '../components/ClientsReviewsSections/clientReviewSections';
 
 export default function Home() {
+
+  const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   dispatch(fetchAllReviews);
+  // }, []);
+
+  
   return (
     <div>
       <Head>
@@ -22,6 +38,7 @@ export default function Home() {
         <ToSellSection />
         <ClientImgSection />
         <ToPricesSection />
+        <ClientReviewSection />
       </main>
     </div>
   )

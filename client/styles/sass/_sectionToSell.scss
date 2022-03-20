@@ -6,14 +6,51 @@
   background-position: center;
   background-size: cover;
 
-    &-img{
-      width: 50em;
-      height: 25em;
-      position: absolute;
-      z-index: 50;
-      left: 0;
-      right: 0;
-      bottom: -1em;
-    }
+  &-img {
+    width: 48em;
+    height: 25em;
+    position: absolute;
+    z-index: 50;
+    left: 0;
+    right: 0;
+    bottom: -1em;
+  }
+  &-title {
+    font-size: 2em;
+    font-weight: 300;
+    color: #008bcf;
+  }
+}
 
+.steps {
+  &__container {
+    width: 48em;
+    height: 9em;
+    background-color: white;
+  }
+  &__number {
+    background-color: #008bcf;
+    width: 2.2em;
+    height: 2.2em;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    & > p {
+      color: white;
+      font-size: 1.5em;
+      font-family: palatino;
+      font-style: italic;
+      font-weight: 400;
+      position: absolute;
+      right: 0.44em;
+    }
+  }
+  &__title {
+    color: #a7acae;
+    font-size: 0.8em;
+  }
+  &__subtitle {
+    color: #a7acaed0;
+    font-size: 0.6em;
+  }
 }
