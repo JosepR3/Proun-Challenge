@@ -1,15 +1,32 @@
-
-export default function DropdownHeader(){
-    return(
-      <div className="dropdown show">
-        <a className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          ¿POR QUE CLICKPISO?
-        </a>
-      <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <a className="dropdown-item" href="#">Action</a>
-        <a className="dropdown-item" href="#">Another action</a>
-        <a className="dropdown-item" href="#">Something else here</a>
-      </div>
-    </div>
-    )
+export default function DropdownHeader() {
+  return (
+    <>
+      <a
+        className="dropdown-toggle steps__subtitle header__links px-2 pb-1 mx-1"
+        type="button"
+        id="dropdownMenuButton1"
+        data-bs-toggle="dropdown"
+        aria-expanded="true"
+      >
+        ¿POR QUÉ CLICPISO?
+      </a>
+      <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li>
+          <a className="dropdown-item" href="#">
+            Action
+          </a>
+        </li>
+        <li>
+          <a className="dropdown-item" href="#">
+            Another action
+          </a>
+        </li>
+        <li>
+          <a className="dropdown-item" href="#">
+            Something else here
+          </a>
+        </li>
+      </ul>
+    </>
+  );
 }

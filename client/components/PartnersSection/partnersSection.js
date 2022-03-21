@@ -13,13 +13,15 @@ export default function AdvantagesSection() {
       <div>
         <Image
         src={inmoSeguros}
-        alt="inmoseguros icon" 
+        alt="inmoseguros icon"
+        
         />
       </div>
       <div>
         <Image
         src={mapfre}
         alt="mapfre icon" 
+        
         />
       </div>
     </div>

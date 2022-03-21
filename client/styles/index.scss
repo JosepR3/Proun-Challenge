@@ -2,7 +2,7 @@
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/variables";
 
-// Hare goes any bootstrap reset
+// Here goes any bootstrap reset
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
@@ -22,3 +22,4 @@
 @import './sass/sectionToPrices';
 @import './sass/sectionClientReview';
 @import './sass/sectionPartners';
+@import './sass/footer';

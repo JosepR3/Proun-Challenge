@@ -9,6 +9,12 @@ body {
   color: a.$main-text-color
 }
 
+@media (max-width:420px){
+  body{
+    width: 100%;
+  }
+}
+
 
 // RESET
 

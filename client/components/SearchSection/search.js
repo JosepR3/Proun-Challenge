@@ -5,7 +5,7 @@ import home from "../../public/assets/shape_2.png";
 
 export default function Search() {
   return (
-    <div className="section__search-container d-flex flex-row align-items-center p-2">
+    <div className="section__search-container d-flex flex-row align-items-center p-2 mt-5">
       <div className="ms-1">
       <Image
         src={home}
