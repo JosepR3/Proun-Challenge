@@ -1,24 +1,20 @@
 const axios = require('axios');
 
-function fetchAllReviews(){
-  axios.get('https://jsonplaceholder.typicode.com/posts')
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.log(error);
-  });
+async function fetchAllReviews(req, res){
+  const response = await axios.get('https://jsonplaceholder.typicode.com/users?_start=0&_limit=5');
+  // getting ramdomly from 0 to 5 to don't bring all the info
+    if(response.data){
+
+    return res.send({
+      data: response.data,
+      error: null
+    });
+  }
+  else if(response.error){
+    console.log("something went wrong with the database");
+  };
 }
 
-// async function fetchUserById(id) {
-//     try {
-
-//     } catch(error){
-
-//     }
-// }
-
 module.exports = {
-  fetchAllReviews: fetchAllReviews,
-  // fetchUserById: fetchUserById
+  fetchAllReviews: fetchAllReviews
 }

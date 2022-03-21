@@ -1,0 +1,25 @@
+@use "./variables" as a;
+
+.client {
+  &__container {
+    width: 20em;
+  }
+  &__card{
+    background-color: #f8f8f8
+  }
+}
+
+.card {
+  border: none;
+  
+  &-title {
+    font-size: 0.8em;
+  }
+  &-text {
+    color: a.$secondary-blue;
+    font-size: 1.7em;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: italic;
+  }
+}

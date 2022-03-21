@@ -1,48 +1,17 @@
-import axios from "axios";
+import { makeRequest } from "./api-utils";
 
-export function createDefaultResponse() {
-  return {
-    data: null,
-    errorMessage: null,
-  };
-}
+function makeApi(request = makeRequest()) {
 
-export async function normalizeResponse(promise = Promise.resolve) {
-  const defaultResponse = createDefaultResponse();
-  let networkResponse = null;
-
-  try {
-    networkResponse = await promise;
-    defaultResponse.data = networkResponse.data;
-  } catch (error) {
-    defaultResponse.errorMessage = error.message;
+    function fetchAllReviews(headers) {
+      return request({
+        url: "/reviews",
+        requestMethod: "GET",
+        headers: headers,
+      });
+    }
+  
+    return {
+      fetchAllReviews: fetchAllReviews
+    };
   }
-  return defaultResponse;
-}
-
-export function makeRequest(
-  httpClient = axios,
-  baseURL = process.env.REACT_APP_API_BASE_URL,
-  baseHeaders = {
-    Accept: "application/json",
-  }
-) {
-  return async function request({
-    url = "/",
-    requestMethod = "GET",
-    body = {},
-    headers = {},
-  }) {
-    return normalizeResponse(
-      httpClient({
-        url: baseURL + url,
-        method: requestMethod,
-        data: body,
-        headers: {
-          ...baseHeaders,
-          ...headers,
-        }
-      })
-    );
-  };
-}
+export default makeApi();

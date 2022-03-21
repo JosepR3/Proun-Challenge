@@ -1,3 +1,5 @@
+@use "./variables" as a;
+
 .section__advantages{
   height: 21em;
   width: 100%;
@@ -17,15 +19,14 @@
   &-title{
     font-size: 2em;
     font-weight: 300;
-    color: #0099d9;
+    color: a.$secondary-blue;
 
     &-card{
       font-size: 0.9em;
-      color: #008bcf;
+      color: a.$main-blue;
     }
   }
   &-subtitle{
-    color: #a7acae;
     font-size: 0.8em;
   }
 

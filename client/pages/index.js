@@ -5,23 +5,24 @@ import { useDispatch } from "react-redux";
 // State
 import { fetchAllReviews } from '../redux/reviews/reviews-actions';
 
-
 // Components
 import Header from '../components/Header/header';
 import SearchSection from '../components/SearchSection/searchSection';
 import AdvantagesSection from '../components/AdvantagesSection/advantagesSection';
-import ToSellSection from '../components/toSellSection/toSellSection';
-import ToPricesSection from '../components/toPricesSection/toPricesSection';
+import ToSellSection from '../components/ToSellSection/toSellSection';
+import ToPricesSection from '../components/ToPricesSection/toPricesSection';
 import ClientImgSection from '../components/ClientImgSection/clientImgSection';
 import ClientReviewSection from '../components/ClientsReviewsSections/clientReviewSections';
+import PartnersSection from '../components/PartnersSection/partnersSection';
+import Footer from '../components/Footer/footer'
 
 export default function Home() {
 
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(fetchAllReviews);
-  // }, []);
+  useEffect(() => {
+    dispatch(fetchAllReviews);
+  }, []);
 
   
   return (
@@ -39,6 +40,8 @@ export default function Home() {
         <ClientImgSection />
         <ToPricesSection />
         <ClientReviewSection />
+        <PartnersSection />
+        <Footer />
       </main>
     </div>
   )

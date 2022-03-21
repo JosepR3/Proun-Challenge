@@ -6,7 +6,7 @@
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
-
+@import './sass/variables';
 @import './sass/globals';
 
 // PAGES
@@ -20,3 +20,5 @@
 @import './sass/sectionAdvantages';
 @import './sass/sectionToSell';
 @import './sass/sectionToPrices';
+@import './sass/sectionClientReview';
+@import './sass/sectionPartners';

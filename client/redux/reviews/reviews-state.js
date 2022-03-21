@@ -1,6 +1,2 @@
-const initialState = {
-    clientName: "hola",
-    review: "probando"
-}
-
+const initialState = []
 export default initialState
