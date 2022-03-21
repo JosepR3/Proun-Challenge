@@ -12,7 +12,7 @@ import mailLogo from "../../public/assets/mail.png";
 export default function Header() {
   return (
     <header className="header fixed-top py-3">
-      <div className="container d-flex flex-row justify-content-between">
+      <div className="container-fluid d-flex flex-row justify-content-between">
       <div>
         <a href="#">
           <Image

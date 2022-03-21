@@ -20,6 +20,7 @@
     font-size: 2em;
     font-weight: 300;
     color: a.$secondary-blue;
+    margin-top: 2em;
 
     &-card{
       font-size: 0.9em;
@@ -30,4 +31,28 @@
     font-size: 0.8em;
   }
 
+}
+
+@media (max-width:420px){
+  .section__advantages{
+    height: max-content;
+    &-container{
+      position: inherit;
+      width: 100%;
+      height: fit-content;
+      margin: 0;
+      text-align: center;
+    }
+    &-title{
+      margin-top: 0.5em;
+      font-size: 1.7em;
+      &-card{
+        text-align: start;
+      }
+    }
+    &-subtitle{
+      font-size: 0.7em;
+      text-align: start;
+    }
+  }
 }

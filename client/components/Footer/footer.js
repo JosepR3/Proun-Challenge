@@ -11,7 +11,7 @@ import ytLogo from "../../public/assets/1489335135-youtube-circle-color.png";
 
 export default function Footer() {
   return (
-    <footer className="container d-flex flex-column footer mt-4">
+    <footer className="container-fluid d-flex flex-column footer mt-4">
       <div className="d-flex flex-row justify-content-around my-4">
         <div>
           <Image src={mainLogo} alt="brand logo" />

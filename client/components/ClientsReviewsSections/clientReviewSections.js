@@ -18,7 +18,7 @@ export default function ClientReviewSection() {
   console.log(reviews);
 
   return (
-    <section className="section__clients w-100">
+    <section className="section__clients container-fluid">
       <div className="container text-center my-5">
         <h3 className="section__advantages-title mt-3">
           Nuestra mejor referencia, nuestros clientes

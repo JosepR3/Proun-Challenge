@@ -12,3 +12,14 @@
   height: 16em;
   position: relative;
 }
+
+@media (max-width:420px) {
+  .section__toPrices {
+    width: 100vw;
+    height: 10em;
+    background: url("../../public/assets/cta.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
+  }
+}
