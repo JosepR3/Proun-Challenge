@@ -13,9 +13,10 @@ import AdvantagesSection from '../components/AdvantagesSection/advantagesSection
 import ToSellSection from '../components/ToSellSection/toSellSection';
 import ToPricesSection from '../components/ToPricesSection/toPricesSection';
 import ClientImgSection from '../components/ClientImgSection/clientImgSection';
-import ClientReviewSection from '../components/ClientsReviewsSections/clientReviewSections';
+import ClientReviewSection from '../components/ClientsReviewsSection/clientReviewSections';
 import PartnersSection from '../components/PartnersSection/partnersSection';
 import Footer from '../components/Footer/footer'
+import OffersSection from '../components/OffersSection/offersSection';
 
 export default function Home() {
 
@@ -35,8 +36,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-
+      
+      <Header width={size.width} />
       <main className="d-flex flex-column align-items-center">
         <SearchSection width={size.width} />
         <AdvantagesSection width={size.width} />
@@ -44,7 +45,7 @@ export default function Home() {
         { size.width > 420 ? <ClientImgSection /> : null}
         <ToPricesSection width={size.width} />
         <ClientReviewSection width={size.width} />
-        <PartnersSection width={size.width} />
+        { size.width > 420 ? <PartnersSection /> : <OffersSection /> }
         <Footer width={size.width} />
       </main>
     </div>

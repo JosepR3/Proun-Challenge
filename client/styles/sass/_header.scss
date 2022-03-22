@@ -13,5 +13,10 @@
 @media (max-width:420px){
   .header{
     position: unset;
+
+    &__links{
+      display: none;
+    }
   }
+
 }

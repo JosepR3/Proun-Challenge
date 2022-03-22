@@ -1,0 +1,24 @@
+
+.section__offers{
+  width: 100%;
+  background: url("../../public/assets/rectangle-5.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+    &-title{
+      color: white;
+      font-size: 1.7em;
+    }
+    &-subtitle{
+      color: white;
+      font-size: 0.75em;
+    }
+    &-btn{
+      width: 20em;
+      border-radius: 100px;
+      border: solid 2px white;
+      color: white;
+      background-color: transparent;
+      font-size: 0.75em;
+    }
+}
